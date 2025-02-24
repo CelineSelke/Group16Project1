@@ -1,8 +1,47 @@
+* {
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+
 html, body {
-    align-items: center;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer, #game-board {
+    text-align: center;
 }
 
 p {
     color: black;
+}
+
+section {
+    min-height: 100vh;
+    overflow: auto;
+}
+
+/* Game Page */
+
+#game-board {
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#game-body {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+}
+
+#game, #table{
+    flex: 1;    
+    height: 100%;
+}
+
+#rules {
+    background-color: lightgray;
 }
