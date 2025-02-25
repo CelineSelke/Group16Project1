@@ -59,4 +59,42 @@ section {
 
 #rules {
     background-color: lightgray;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    background-color: rgb(204, 231, 240);
 }
+
+/* .game-table{
+    height: 700px;
+    width: 800px;
+    background-image: radial-gradient(rgb(78, 194, 78), darkgreen);
+    border: rgb(211, 255, 211) 5px outset;
+    border-radius: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.game-table #scoreboard{
+    float:right;
+    background: white;
+    
+}
+
+.game-table #scoreboard td{
+    padding: 5px
+}
+
+.game-table #man{
+    height: 70px;
+    position:static;
+    top: 230px;
+    right:450px;
+    
+}
+
+.game-table #woman{
+    height: 70px;
+    position:fixed;
+    bottom: 70px;
+    right: 450px;
+} */
