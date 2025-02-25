@@ -16,16 +16,27 @@ html, body {
     margin-right: auto;
 }
 
+.game-table #scoreboard{
+    float:right;
+    background: white;
+    
+}
+
+.game-table #scoreboard td{
+    padding: 5px
+}
+
 .game-table #man{
     height: 70px;
-    position: absolute;
-    top: 250px;
-    
+    position:static;
+    top: 230px;
+    right:450px;
     
 }
 
 .game-table #woman{
     height: 70px;
-    position: absolute;
-    bottom: 250px;
+    position:fixed;
+    bottom: 70px;
+    right: 450px;
 }
