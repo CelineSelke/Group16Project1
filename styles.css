@@ -30,7 +30,13 @@ section {
 /* Game Page */
 
 #game-board {
-    background-color: lightgreen;
+    height: 700px;
+    width: 800px;
+    background-image: radial-gradient(rgb(78, 194, 78), darkgreen);
+    border: rgb(211, 255, 211) 5px outset;
+    border-radius: 5%;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: column;
 }
@@ -54,6 +60,16 @@ section {
     flex: 2;
 }
 
+#table #scoreboard{
+    float:right;
+    background: white;
+    
+}
+
+#table #scoreboard td{
+    padding: 5px
+}
+
 
 /* Rules Page */
 
@@ -74,15 +90,9 @@ section {
     margin-right: auto;
 }
 
-.game-table #scoreboard{
-    float:right;
-    background: white;
-    
-}
 
-.game-table #scoreboard td{
-    padding: 5px
-}
+
+
 
 .game-table #man{
     height: 70px;
