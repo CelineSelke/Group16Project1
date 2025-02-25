@@ -81,24 +81,9 @@ section {
     background-color: lightgray;
     text-align: center;
     font-family:'Courier New', Courier, monospace;
-    background-color: rgb(204, 231, 240);
 }
 
-/* .game-table{
-    height: 700px;
-    width: 800px;
-    background-image: radial-gradient(rgb(78, 194, 78), darkgreen);
-    border: rgb(211, 255, 211) 5px outset;
-    border-radius: 5%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-
-
-
-.game-table #man{
+/* .game-table #man{
     height: 70px;
     position:static;
     top: 230px;
