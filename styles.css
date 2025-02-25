@@ -17,6 +17,10 @@ header, footer, #game-board {
     text-align: center;
 }
 
+body {
+    background-color: rgb(204, 231, 240);
+}
+
 p {
     color: black;
 }
