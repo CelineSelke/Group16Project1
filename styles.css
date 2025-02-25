@@ -39,12 +39,23 @@ section {
     width: 80%;
     height: 80vh;
     display: flex;
+    gap: 40px;
 }
 
-#game, #table{
-    flex: 1;    
+#game, #table{  
     height: 100%;
 }
+
+#game {
+    flex: 3
+}
+
+#table {
+    flex: 2;
+}
+
+
+/* Rules Page */
 
 #rules {
     background-color: lightgray;
