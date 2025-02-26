@@ -18,6 +18,9 @@ header, footer, #game-board {
 
 body {
     background-color: rgb(204, 231, 240);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 p {
@@ -38,8 +41,6 @@ section {
     background-image: radial-gradient(rgb(78, 194, 78), darkgreen);
     border: rgb(211, 255, 211) 5px outset;
     border-radius: 5%;
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
     flex-direction: column;
 }
@@ -78,6 +79,7 @@ section {
 
 #rules {
     background-color: lightgray;
+    width: 100%;
     text-align: center;
     font-family:'Courier New', Courier, monospace;
 }
