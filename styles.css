@@ -58,17 +58,7 @@ section {
 }
 
 #game {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 80%;
-    align-self: center;
-}
-
-.game-img {
-    height: 50px;
-    width: auto;
+    flex: 3
 }
 
 #table {
