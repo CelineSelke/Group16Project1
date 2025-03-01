@@ -1,111 +1,407 @@
 * {
-    box-sizing: border-box;
-    cursor: default;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  cursor: default;
+  scroll-behavior: smooth;
 }
 
 html, body {
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    font-family: Roboto, sans-serif;
-    scroll-behavior: smooth;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  scroll-behavior: smooth;
 }
 
 header, footer, #game-board {
-    text-align: center;
+  text-align: center;
 }
 
 body {
-    background-color: rgb(204, 231, 240);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: rgb(204, 231, 240);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 p {
-    color: black;
+  color: black;
 }
 
 section {
-    min-height: 100vh;
-    overflow: auto;
-    align-items: center;
+  min-height: 100vh;
+  overflow: auto;
+  align-items: center;
 }
 
 /* Game Page */
-
 #game-board {
-    height: 700px;
-    width: 800px;
-    background-image: radial-gradient(rgb(78, 194, 78), darkgreen);
-    border: rgb(211, 255, 211) 5px outset;
-    border-radius: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  height: 700px;
+  width: 800px;
+  background-image: radial-gradient(rgb(78, 194, 78), darkgreen);
+  border: rgb(211, 255, 211) 5px outset;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #game-body {
-    width: 80%;
-    height: 80vh;
-    display: flex;
-    gap: 40px;
+  width: 80%;
+  height: 80vh;
+  display: flex;
+  gap: 40px;
 }
 
-#game, #table{  
-    height: 100%;
+#game, #table {
+  height: 100%;
 }
 
 #game {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 80%;
-    align-self: center;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%;
+  align-self: center;
 }
 
 .game-img {
-    height: 50px;
-    width: auto;
+  height: 50px;
+  width: auto;
+}
+
+#dice-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+#dice-wrapper p {
+  transform: translateY(15px);
+}
+#dice-wrapper .click-area {
+  width: 200px;
+  height: 10vh;
+  overflow: hidden;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 40px -30px inset;
+  background-color: lightgray;
+  border-radius: 5%;
+}
+#dice-wrapper .click-area:hover {
+  box-shadow: 0 0 40px -20px #0a8 inset;
+}
+#dice-wrapper .throw {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+#dice-wrapper .throw-1 {
+  animation: cycle-dice 0.123s steps(6, end) infinite;
+  animation-delay: -0.0205s;
+  opacity: 1;
+}
+#dice-wrapper .throw-1:active {
+  position: static;
+  margin-left: 200%;
+}
+#dice-wrapper .throw-1:active:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 18 !important;
+}
+#dice-wrapper .throw-2 {
+  animation: cycle-dice 0.123s steps(6, end) infinite;
+  animation-delay: -0.041s;
+  opacity: 1;
+}
+#dice-wrapper .throw-2:active {
+  position: static;
+  margin-left: 200%;
+}
+#dice-wrapper .throw-2:active:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 18 !important;
+}
+#dice-wrapper .throw-3 {
+  animation: cycle-dice 0.123s steps(6, end) infinite;
+  animation-delay: -0.0615s;
+  opacity: 1;
+}
+#dice-wrapper .throw-3:active {
+  position: static;
+  margin-left: 200%;
+}
+#dice-wrapper .throw-3:active:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 18 !important;
+}
+#dice-wrapper .throw-4 {
+  animation: cycle-dice 0.123s steps(6, end) infinite;
+  animation-delay: -0.082s;
+  opacity: 1;
+}
+#dice-wrapper .throw-4:active {
+  position: static;
+  margin-left: 200%;
+}
+#dice-wrapper .throw-4:active:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 18 !important;
+}
+#dice-wrapper .throw-5 {
+  animation: cycle-dice 0.123s steps(6, end) infinite;
+  animation-delay: -0.1025s;
+  opacity: 1;
+}
+#dice-wrapper .throw-5:active {
+  position: static;
+  margin-left: 200%;
+}
+#dice-wrapper .throw-5:active:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 18 !important;
+}
+#dice-wrapper .throw-6 {
+  animation: cycle-dice 0.123s steps(6, end) infinite;
+  animation-delay: -0.123s;
+  opacity: 1;
+}
+#dice-wrapper .throw-6:active {
+  position: static;
+  margin-left: 200%;
+}
+#dice-wrapper .throw-6:active:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 18 !important;
+}
+#dice-wrapper .click-area > .clear {
+  display: none;
+  text-align: center;
+  line-height: 100px;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+#dice-wrapper #roll-0:not(:checked) ~ .click-area > .clear {
+  z-index: 20;
+  display: block;
+}
+#dice-wrapper [name=roll] {
+  display: none;
+}
+@keyframes cycle-dice {
+  0% {
+    z-index: 10;
+  }
+  100% {
+    z-index: 16;
+  }
+}
+#dice-wrapper .wrapper {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  perspective: 400px;
+  margin: 1em auto;
+  position: relative;
+  pointer-events: none;
+  transform-style: preserve-3d;
+}
+#dice-wrapper .dice {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  height: 100px;
+  width: 100px;
+  transition: transform 2s ease-out;
+  transform-style: preserve-3d;
+  transform-origin: center center -50px;
+  pointer-events: none;
+}
+#dice-wrapper .face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #911;
+  box-shadow: 0 0 8px -4px #999 inset;
+}
+#dice-wrapper .face:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 245, 100, 0.75);
+  left: 25%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+}
+#dice-wrapper .face-1 {
+  background: #955;
+}
+#dice-wrapper .face-2 {
+  background: #844;
+}
+#dice-wrapper .face-3 {
+  background: #633;
+}
+#dice-wrapper .face-4 {
+  background: #522;
+}
+#dice-wrapper .face-5 {
+  background: #411;
+}
+#dice-wrapper .face-6 {
+  background: #300;
+}
+#dice-wrapper .face-1:after {
+  left: 50%;
+  top: 50%;
+}
+#dice-wrapper .face-2:after {
+  box-shadow: 50px 50px rgba(255, 245, 100, 0.75);
+}
+#dice-wrapper .face-3:after {
+  box-shadow: 50px 50px rgba(255, 245, 100, 0.75), 25px 25px rgba(255, 245, 100, 0.75);
+}
+#dice-wrapper .face-4:after {
+  box-shadow: 0 50px rgba(255, 245, 100, 0.75), 50px 0 rgba(255, 245, 100, 0.75), 50px 50px rgba(255, 245, 100, 0.75);
+}
+#dice-wrapper .face-5:after {
+  box-shadow: 0 50px rgba(255, 245, 100, 0.75), 50px 0 rgba(255, 245, 100, 0.75), 50px 50px rgba(255, 245, 100, 0.75), 25px 25px rgba(255, 245, 100, 0.75);
+}
+#dice-wrapper .face-6:after {
+  box-shadow: 0 50px rgba(255, 245, 100, 0.75), 50px 0 rgba(255, 245, 100, 0.75), 50px 50px rgba(255, 245, 100, 0.75), 0 25px rgba(255, 245, 100, 0.75), 50px 25px rgba(255, 245, 100, 0.75);
+}
+#dice-wrapper .face-1 {
+  transform: rotateY(180deg);
+}
+#dice-wrapper .face-2 {
+  transform-origin: left center;
+  transform: rotateY(-90deg);
+}
+#dice-wrapper .face-3 {
+  transform-origin: top center;
+  transform: rotateX(90deg);
+}
+#dice-wrapper .face-4 {
+  transform-origin: bottom center;
+  transform: rotateX(-90deg);
+}
+#dice-wrapper .face-5 {
+  transform-origin: right center;
+  transform: rotateY(90deg);
+}
+#dice-wrapper .face-6 {
+  transform: translateZ(100px);
+}
+#dice-wrapper .wrapper > .dice {
+  transform: rotateX(8.5turn) rotateY(6turn) rotateZ(0) translateZ(-100px);
+}
+#dice-wrapper #roll-1:checked ~ .wrapper > .dice {
+  transform: rotateX(1turn) rotateY(-3.5turn) rotateZ(0) translateZ(-100px);
+}
+#dice-wrapper #roll-2:checked ~ .wrapper > .dice {
+  transform: rotateX(2turn) rotateY(5.25turn) rotateZ(0) translateZ(-100px);
+}
+#dice-wrapper #roll-3:checked ~ .wrapper > .dice {
+  transform: rotateX(3.75turn) rotateY(3turn) rotateZ(0) translateZ(-100px) !important;
+}
+#dice-wrapper #roll-4:checked ~ .wrapper > .dice {
+  transform: rotateX(5.25turn) rotateY(-1turn) rotateZ(0) translateZ(-100px) !important;
+}
+#dice-wrapper #roll-5:checked ~ .wrapper > .dice {
+  transform: rotateX(7turn) rotateY(7.75turn) rotateZ(0) translateZ(-100px) !important;
+}
+#dice-wrapper #roll-6:checked ~ .wrapper > .dice {
+  transform: rotateX(6turn) rotateY(2turn) rotateZ(0) translateZ(-100px) !important;
+}
+#dice-wrapper .roll-result {
+  left: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  font-weight: bold;
+}
+#dice-wrapper #roll-1:checked ~ .rr1 {
+  transition: opacity 0s linear 2s;
+  opacity: 1;
+}
+#dice-wrapper #roll-2:checked ~ .rr2 {
+  transition: opacity 0s linear 2s;
+  opacity: 1;
+}
+#dice-wrapper #roll-3:checked ~ .rr3 {
+  transition: opacity 0s linear 2s;
+  opacity: 1;
+}
+#dice-wrapper #roll-4:checked ~ .rr4 {
+  transition: opacity 0s linear 2s;
+  opacity: 1;
+}
+#dice-wrapper #roll-5:checked ~ .rr5 {
+  transition: opacity 0s linear 2s;
+  opacity: 1;
+}
+#dice-wrapper #roll-6:checked ~ .rr6 {
+  transition: opacity 0s linear 2s;
+  opacity: 1;
 }
 
 #table {
-    flex: 2;
+  flex: 2;
 }
 
-#table #scoreboard{
-    float:right;
-    background: white;
-    
+#table #scoreboard {
+  float: right;
+  background: white;
 }
 
-#table #scoreboard td{
-    padding: 5px
+#table #scoreboard td {
+  padding: 5px;
 }
-
 
 /* Rules Page */
-
 #rules {
-    background-color: lightgray;
-    width: 100%;
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
-}
-
-/* .game-table #man{
-    height: 70px;
-    position:static;
-    top: 230px;
-    right:450px;
-    
-}
-
-.game-table #woman{
-    height: 70px;
-    position:fixed;
-    bottom: 70px;
-    right: 450px;
-} */
+  background-color: lightgray;
+  width: 100%;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}/*# sourceMappingURL=styles.css.map */
