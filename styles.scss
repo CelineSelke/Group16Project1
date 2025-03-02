@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+    cursor: default;
+    scroll-behavior: smooth;
+  }
+  
+  html, body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  header, footer, #game-board {
+    text-align: center;
+  }
+  
+  body {
+    background-color: rgb(204, 231, 240);
+  }
+  
+  p {
+    color: black;
+  }
+  
+  section {
+    min-height: 100vh;
+    overflow: auto;
+    align-items: center;
+  }
+  
+  /* Game Page */
+  #game-board {
+    height: 700px;
+    width: 800px;
+    background-image: radial-gradient(rgb(78, 194, 78), darkgreen);
+    border: rgb(211, 255, 211) 5px outset;
+    border-radius: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #game-body {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    gap: 40px;
+  }
+  
+  #game, #table {
+    height: 100%;
+  }
+  
+  #game {
+    flex: 3;
+  }
+  
+  #table {
+    flex: 2;
+  }
+  
+  #table #scoreboard {
+    float: right;
+    background: white;
+  }
+  
+  #table #scoreboard td {
+    padding: 5px;
+  }
+  
+  /* Rules Page */
+  #rules {
+    background-color: lightgray;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* .game-table #man{
+      height: 70px;
+      position:static;
+      top: 230px;
+      right:450px;
+  
+  }
+  
+  .game-table #woman{
+      height: 70px;
+      position:fixed;
+      bottom: 70px;
+      right: 450px;
+  } */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  #rules {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #eee;
+    border-radius: 8px;
+  }
+  
+  .carousel-item h2 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .carousel-item p {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+    line-height: 1.6;
+  }
+  
+  input[type=radio] {
+    width: 50pxl;
+  }
+  
+  .carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .carousel-nav.prev {
+    left: 10px;
+  }
+  
+  .carousel-nav.next {
+    right: 10px;
+  }
+  
+  #item1:checked ~ .carousel .carousel-item:nth-child(1),
+  #item2:checked ~ .carousel .carousel-item:nth-child(2),
+  #item3:checked ~ .carousel .carousel-item:nth-child(3),
+  #item4:checked ~ .carousel .carousel-item:nth-child(4),
+  #item5:checked ~ .carousel .carousel-item:nth-child(5),
+  #item6:checked ~ .carousel .carousel-item:nth-child(6),
+  #item7:checked ~ .carousel .carousel-item:nth-child(7),
+  #item8:checked ~ .carousel .carousel-item:nth-child(8) {
+    transform: translateX(0%);
+  }
+  
+  #item1:checked ~ .carousel {
+    transform: translateX(0%);
+  }
+  
+  #item2:checked ~ .carousel {
+    transform: translateX(-100%);
+  }
+  
+  #item3:checked ~ .carousel {
+    transform: translateX(-200%);
+  }
+  
+  #item4:checked ~ .carousel {
+    transform: translateX(-300%);
+  }
+  
+  #item5:checked ~ .carousel {
+    transform: translateX(-400%);
+  }
+  
+  #item6:checked ~ .carousel {
+    transform: translateX(-500%);
+  }
+  
+  #item7:checked ~ .carousel {
+    transform: translateX(-600%);
+  }
+  
+  #item8:checked ~ .carousel {
+    transform: translateX(-700%);
+  }
+  
+  label[for=item1],
+  label[for=item2],
+  label[for=item3],
+  label[for=item4],
+  label[for=item5],
+  label[for=item6],
+  label[for=item7],
+  label[for=item8] {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  label[for=item1] {
+    left: 10px;
+  }
+  
+  label[for=item2] {
+    right: 10px;
+  }
+  
+  label:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  input#item1:checked ~ .carousel .carousel-item:nth-child(1) {
+    display: block;
+  }
+  
+  input#item2:checked ~ .carousel .carousel-item:nth-child(2) {
+    display: block;
+  }
+  
+  input#item3:checked ~ .carousel .carousel-item:nth-child(3) {
+    display: block;
+  }
+  
+  input#item4:checked ~ .carousel .carousel-item:nth-child(4) {
+    display: block;
+  }
+  
+  input#item5:checked ~ .carousel .carousel-item:nth-child(4) {
+    display: block;
+  }
+  
+  input#item6:checked ~ .carousel .carousel-item:nth-child(4) {
+    display: block;
+  }
+  
+  input#item7:checked ~ .carousel .carousel-item:nth-child(4) {
+    display: block;
+  }
+  
+  input#item8:checked ~ .carousel .carousel-item:nth-child(4) {
+    display: block;
+  }/*# sourceMappingURL=styles.css.map */
