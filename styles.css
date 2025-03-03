@@ -399,6 +399,15 @@ section {
   padding: 5px;
 }
 
+/*Hide border and outline of scoreboard input, align input text*/
+td input {
+  outline: none;
+  border-radius: 0;
+  border-style: none;
+  text-align: center;
+  width: 30px;
+}
+
 /* Rules Page */
 #rules {
   background-color: lightgray;
@@ -428,13 +437,6 @@ section {
   padding: 5px;
 }
 
-td input {
-  outline: none;
-  border-radius: 0;
-  border-style: none;
-  text-align: center;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -459,6 +461,7 @@ body {
   background-image: linear-gradient(#0093a5, #00a5e8);
 }
 
+/*Hides overflow to only display one element of the rules carousel at a time*/
 .carousel-container {
   position: relative;
   overflow: hidden;
@@ -524,6 +527,7 @@ input[type=radio] {
   right: 10px;
 }
 
+/*When a label is checked, all divs of class carousel-item are translated to the left. Since overflows are hidden by the parent, only one carousel-item is displayed at a time*/
 #item1:checked ~ .carousel-item {
   transform: translateX(0%);
 }
@@ -562,7 +566,7 @@ label[for=item8] {
   top: 50%;
   transform: translateY(-50%);
   font-size: 24px;
-  color: #fff;
+  color: white;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
   cursor: pointer;
@@ -584,6 +588,7 @@ label:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+/*All radio buttons/labels moved to under the carousel items*/
 #item1 {
   position: absolute;
   top: 95%;
@@ -640,6 +645,7 @@ label:hover {
   z-index: 5;
 }
 
+/*Remove decoration from link to rules pdf*/
 .carousel-container a:link {
   text-decoration: none;
   color: white;
