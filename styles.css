@@ -80,7 +80,7 @@ section {
 }
 #dice-wrapper .click-area {
   width: 200px;
-  height: 10vh;
+  height: 50px;
   overflow: hidden;
   position: relative;
   margin-left: auto;
@@ -435,13 +435,6 @@ td input {
 
 #table #scoreboard td {
   padding: 5px;
-}
-
-td input {
-  outline: none;
-  border-radius: 0;
-  border-style: none;
-  text-align: center;
 }
 
 * {
