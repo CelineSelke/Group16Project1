@@ -71,6 +71,13 @@ section {
   padding: 5px;
 }
 
+td input {
+  outline: none;
+  border-radius: 0;
+  border-style: none;
+  text-align: center;
+}
+
 /* .game-table #man{
     height: 70px;
     position:static;
@@ -104,20 +111,20 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #0093a5;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(#0093a5, #00a5e8);
 }
 
 .carousel-container {
   position: relative;
   overflow: hidden;
-  background-color: #0093a5;
+  background-image: linear-gradient(#0093a5, #00a5e8);
 }
 
 .carousel {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 
 .carousel-item {
@@ -127,8 +134,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #008574;
-  border: 2px solid #eee;
+  background-image: radial-gradient(#0093a5, #008574);
+  border: 2px solid silver;
   border-radius: 8px;
 }
 
@@ -288,6 +295,26 @@ label:hover {
   top: 95%;
   left: 56%;
   z-index: 5;
+}
+
+.carousel-container a:link {
+  text-decoration: none;
+  color: white;
+}
+
+.carousel-container a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.carousel-container a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.carousel-container a:active {
+  text-decoration: underline;
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */
