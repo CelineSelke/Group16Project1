@@ -75,235 +75,234 @@ section {
 // Dice Roller
 
 #dice-wrapper {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    p {
-      transform: translateY(15px)
+  p {
+    transform: translateY(15px)
+  }
+
+  .click-area {
+      width: 200px;
+      height: 10vh;
+      overflow: hidden;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 40px -30px inset;
+      background-color: lightgray;
+      border-radius:5%;
+      
+      &:hover {
+          box-shadow: 0 0 40px -20px #0a8 inset;
+      }
+      
     }
-
-    .click-area {
-        width: 200px;
-        height: 10vh;
-        overflow: hidden;
-        position: relative;
-        margin-left: auto;
-        margin-right: auto;
-        box-shadow: 0 0 40px -30px inset;
-        background-color: lightgray;
-        border-radius:5%;
+    
+    .throw {
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      cursor:pointer;
+      z-index: 1;
+    }
+    
+    
+    $colors: (#955, #844, #633, #522, #411, #300);
+    $t: 0.123s;
+    
+    @for $i from 1 through 6 {
+      .throw-#{$i} {
+        animation:cycle-dice $t steps(6, end) infinite;
+        animation-delay: - ($t / 6) * $i;
+        //background:nth([blue, red, green, yellow, pink, cyan], $i);
+        opacity:1;
         
-        &:hover {
-            box-shadow: 0 0 40px -20px #0a8 inset;
-        }
-        
-      }
-      
-      .throw {
-        display: block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        cursor:pointer;
-        z-index: 1;
-      }
-      
-      
-      $colors: (#955, #844, #633, #522, #411, #300);
-      $t: 0.123s;
-      
-      @for $i from 1 through 6 {
-        .throw-#{$i} {
-          animation:cycle-dice $t steps(6, end) infinite;
-          animation-delay: - ($t / 6) * $i;
-          //background:nth([blue, red, green, yellow, pink, cyan], $i);
-          opacity:1;
+        &:active {
+          position: static;
+          margin-left: 200%;
           
-          &:active {
-            position: static;
-            margin-left: 200%;
-            
-            &:before {
-              content:'';
-              position: absolute;
-              left: 0;right: 0;top: 0;bottom: 0;
-              z-index: 18!important;
-              //background:red;
-            }
+          &:before {
+            content:'';
+            position: absolute;
+            left: 0;right: 0;top: 0;bottom: 0;
+            z-index: 18!important;
+            //background:red;
           }
         }
       }
-      
-      .click-area > .clear {
-        display: none;
-        text-align: center;
-        line-height: 100px;
-        color:white;
-        text-shadow: 1px 1px black;
+    }
+    
+    .click-area > .clear {
+      display: none;
+      text-align: center;
+      line-height: 100px;
+      color:white;
+      text-shadow: 1px 1px black;
+    }
+    #roll-0:not(:checked) ~ .click-area > .clear{
+      z-index:20;
+      display: block;
+    }
+    
+    [name=roll] {
+      display: none;
+    }
+    
+    
+    @keyframes cycle-dice {
+      0% {
+        z-index: 10;
       }
-      #roll-0:not(:checked) ~ .click-area > .clear{
-        z-index:20;
-        display: block;
+      100% {
+        z-index: 16;
       }
+    }
+    
+    .wrapper {
+      width: 100px;height:100px;
+      margin:0 auto;
+      perspective:400px;
+      margin:1em auto;
+      position: relative;
+      pointer-events:none;
       
-      [name=roll] {
-        display: none;
-      }
+      transform-style:preserve-3d;
+    }
+    
+    $rollDuration:2s;
+    .dice {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top:-50px;
+      margin-left:-50px;
+      height:100px;
+      width:100px;
+      transition:transform $rollDuration ease-out; 
       
+      //animation:rollDice 20s linear infinite;
+      transform-style:preserve-3d; 
+      transform-origin:center center -50px ;
+      pointer-events:none;
+    }
+    
+    
+    $dot-c:rgba(255,245,100,.75);
+    
+    .face {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background:#911;
+      box-shadow: 0 0 8px -4px #999 inset;
+      //backface-visibility:hidden;
       
-      @keyframes cycle-dice {
-        0% {
-          z-index: 10;
-        }
-        100% {
-          z-index: 16;
-        }
-      }
-      
-      .wrapper {
-        width: 100px;height:100px;
-        margin:0 auto;
-        perspective:400px;
-        margin:1em auto;
-        position: relative;
-        pointer-events:none;
-        
-        transform-style:preserve-3d;
-      }
-      
-      $rollDuration:2s;
-      .dice {
+      &:after {
+        content:'';
         position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-top:-50px;
-        margin-left:-50px;
-        height:100px;
-        width:100px;
-        transition:transform $rollDuration ease-out; 
-        
-        //animation:rollDice 20s linear infinite;
-        transform-style:preserve-3d; 
-        transform-origin:center center -50px ;
-        pointer-events:none;
+        width:20px;
+        height:20px;
+        border-radius:50%;
+        background:$dot-c;
+        left: 25%;
+        top: 25%;
+        transform:translate(-50%, -50%);
       }
-      
-      
-      $dot-c:rgba(255,245,100,.75);
-      
-      .face {
-        position: absolute;
-        width: 100px;
-        height: 100px;
-        background:#911;
-        box-shadow: 0 0 8px -4px #999 inset;
-        //backface-visibility:hidden;
-        
-        &:after {
-          content:'';
-          position: absolute;
-          width:20px;
-          height:20px;
-          border-radius:50%;
-          background:$dot-c;
-          left: 25%;
-          top: 25%;
-          transform:translate(-50%, -50%);
-        }
+    }
+    
+    @for $i from 1 through 6 {
+      .face-#{$i} {
+        background:nth($colors, $i);
       }
-      
-      @for $i from 1 through 6 {
-        .face-#{$i} {
-          background:nth($colors, $i);
-        }
-      }
-      
-      .face-1:after  {
-        left: 50%;
-        top: 50%;
-      }
-      .face-2:after {
-        box-shadow: 50px 50px $dot-c;
-      }
-      .face-3:after {
-        box-shadow: 50px 50px $dot-c, 25px 25px $dot-c;
-      }
-      .face-4:after {
-        box-shadow: 0 50px $dot-c, 50px 0 $dot-c, 50px 50px $dot-c;
-      }
-      .face-5:after {
-        box-shadow: 0 50px $dot-c, 50px 0 $dot-c, 50px 50px $dot-c, 25px 25px $dot-c;
-      }
-      .face-6:after {
-        box-shadow: 0 50px $dot-c, 50px 0 $dot-c, 50px 50px $dot-c, 0 25px $dot-c, 50px 25px $dot-c;
-      }
-      
-      
-      .face-1 {
-        transform:rotateY(180deg);
-      }
-      .face-2 {
-        transform-origin:left center;
-        transform:rotateY(-90deg);
-      }
-      .face-3 {
-        transform-origin:top center;
-        transform:rotateX(90deg);
-      }
-      .face-4 {
-        transform-origin:bottom center;
-        transform:rotateX(-90deg);
-      }
-      .face-5 {
-        transform-origin:right center;
-        transform:rotateY(90deg);
-      }
-      .face-6 {
-        transform:translateZ(100px);
-      }
-      
-      
-      .wrapper > .dice {
-        transform:rotateX(8.5turn) rotateY(6turn) rotateZ(0) translateZ(-100px);  
-      }
-      #roll-1:checked ~ .wrapper > .dice {
-       transform:rotateX(1turn) rotateY(-3.5turn) rotateZ(0) translateZ(-100px);
-      }
-      #roll-2:checked ~ .wrapper > .dice {
-        transform:rotateX(2turn) rotateY(5.25turn) rotateZ(0) translateZ(-100px);
-      }
-      #roll-3:checked ~ .wrapper > .dice {
-        transform:rotateX(3.75turn) rotateY(3turn)  rotateZ(0) translateZ(-100px) !important;
-      }
-      #roll-4:checked ~ .wrapper > .dice {
-        transform:rotateX(5.25turn) rotateY(-1turn)  rotateZ(0) translateZ(-100px)!important;
-      }
-      #roll-5:checked ~ .wrapper > .dice {
-        transform:rotateX(7turn) rotateY(7.75turn) rotateZ(0) translateZ(-100px)!important;
-      }
-      #roll-6:checked ~ .wrapper > .dice {
-        transform:rotateX(6turn) rotateY(2turn) rotateZ(0) translateZ(-100px)!important;
-      }
-      
-      
-      
-      .roll-result {
-        left: 0;right: 0;
-        text-align: center;
-        opacity:0;
-        pointer-events:none;
-        font-weight: bold;
-      }
-      
-      @for $i from 1 through 6 {
-        #roll-#{$i}:checked ~ .rr#{$i} {
-          transition:opacity 0s linear $rollDuration;
-          opacity:1;
-        }  
-      }
-      
+    }
+    
+    .face-1:after  {
+      left: 50%;
+      top: 50%;
+    }
+    .face-2:after {
+      box-shadow: 50px 50px $dot-c;
+    }
+    .face-3:after {
+      box-shadow: 50px 50px $dot-c, 25px 25px $dot-c;
+    }
+    .face-4:after {
+      box-shadow: 0 50px $dot-c, 50px 0 $dot-c, 50px 50px $dot-c;
+    }
+    .face-5:after {
+      box-shadow: 0 50px $dot-c, 50px 0 $dot-c, 50px 50px $dot-c, 25px 25px $dot-c;
+    }
+    .face-6:after {
+      box-shadow: 0 50px $dot-c, 50px 0 $dot-c, 50px 50px $dot-c, 0 25px $dot-c, 50px 25px $dot-c;
+    }
+    
+    
+    .face-1 {
+      transform:rotateY(180deg);
+    }
+    .face-2 {
+      transform-origin:left center;
+      transform:rotateY(-90deg);
+    }
+    .face-3 {
+      transform-origin:top center;
+      transform:rotateX(90deg);
+    }
+    .face-4 {
+      transform-origin:bottom center;
+      transform:rotateX(-90deg);
+    }
+    .face-5 {
+      transform-origin:right center;
+      transform:rotateY(90deg);
+    }
+    .face-6 {
+      transform:translateZ(100px);
+    }
+    
+    
+    .wrapper > .dice {
+      transform:rotateX(8.5turn) rotateY(6turn) rotateZ(0) translateZ(-100px);  
+    }
+    #roll-1:checked ~ .wrapper > .dice {
+      transform:rotateX(1turn) rotateY(-3.5turn) rotateZ(0) translateZ(-100px);
+    }
+    #roll-2:checked ~ .wrapper > .dice {
+      transform:rotateX(2turn) rotateY(5.25turn) rotateZ(0) translateZ(-100px);
+    }
+    #roll-3:checked ~ .wrapper > .dice {
+      transform:rotateX(3.75turn) rotateY(3turn)  rotateZ(0) translateZ(-100px) !important;
+    }
+    #roll-4:checked ~ .wrapper > .dice {
+      transform:rotateX(5.25turn) rotateY(-1turn)  rotateZ(0) translateZ(-100px)!important;
+    }
+    #roll-5:checked ~ .wrapper > .dice {
+      transform:rotateX(7turn) rotateY(7.75turn) rotateZ(0) translateZ(-100px)!important;
+    }
+    #roll-6:checked ~ .wrapper > .dice {
+      transform:rotateX(6turn) rotateY(2turn) rotateZ(0) translateZ(-100px)!important;
+    }
+    
+    
+    
+    .roll-result {
+      left: 0;right: 0;
+      text-align: center;
+      opacity:0;
+      pointer-events:none;
+      font-weight: bold;
+    }
+    
+    @for $i from 1 through 6 {
+      #roll-#{$i}:checked ~ .rr#{$i} {
+        transition:opacity 0s linear $rollDuration;
+        opacity:1;
+      }  
+    }
 }
 
 #table {
@@ -359,22 +358,6 @@ section {
     text-align: center;
   }
   
-
-  
-  /* .game-table #man{
-      height: 70px;
-      position:static;
-      top: 230px;
-      right:450px;
-  
-  }
-  
-  .game-table #woman{
-      height: 70px;
-      position:fixed;
-      bottom: 70px;
-      right: 450px;
-  } */
   * {
     margin: 0;
     padding: 0;
