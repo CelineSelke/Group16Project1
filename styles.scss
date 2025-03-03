@@ -173,56 +173,43 @@
     right: 10px;
   }
   
-  #item1:checked ~ .carousel .carousel-item:nth-child(1),
-  #item2:checked ~ .carousel .carousel-item:nth-child(2),
-  #item3:checked ~ .carousel .carousel-item:nth-child(3),
-  #item4:checked ~ .carousel .carousel-item:nth-child(4),
-  #item5:checked ~ .carousel .carousel-item:nth-child(5),
-  #item6:checked ~ .carousel .carousel-item:nth-child(6),
-  #item7:checked ~ .carousel .carousel-item:nth-child(7),
-  #item8:checked ~ .carousel .carousel-item:nth-child(8) {
+
+  
+  #item1:checked ~ .carousel-item {
     transform: translateX(0%);
   }
   
-  #item1:checked ~ .carousel {
-    transform: translateX(0%);
-  }
-  
-  #item2:checked ~ .carousel {
+  #item2:checked ~ .carousel-item {
     transform: translateX(-100%);
+
   }
   
-  #item3:checked ~ .carousel {
+  #item3:checked ~ .carousel-item {
     transform: translateX(-200%);
+    
   }
   
-  #item4:checked ~ .carousel {
+  #item4:checked ~ .carousel-item {
     transform: translateX(-300%);
   }
   
-  #item5:checked ~ .carousel {
+  #item5:checked ~ .carousel-item {
     transform: translateX(-400%);
   }
   
-  #item6:checked ~ .carousel {
+  #item6:checked ~ .carousel-item {
     transform: translateX(-500%);
   }
   
-  #item7:checked ~ .carousel {
+  #item7:checked ~ .carousel-item {
     transform: translateX(-600%);
   }
   
-  #item8:checked ~ .carousel {
+  #item8:checked ~ .carousel-item {
     transform: translateX(-700%);
   }
   
   label[for=item1],
-  label[for=item2],
-  label[for=item3],
-  label[for=item4],
-  label[for=item5],
-  label[for=item6],
-  label[for=item7],
   label[for=item8] {
     position: absolute;
     top: 50%;
@@ -250,34 +237,65 @@
     background-color: rgba(0, 0, 0, 0.7);
   }
   
-  input#item1:checked ~ .carousel .carousel-item:nth-child(1) {
-    display: block;
+
+
+  #item1{
+    position: absolute;
+    top: 95%;
+    left: 42%;
+    z-index:5;
+  }
+  #item2{
+    position: absolute;
+    top: 95%;
+    left: 44%;
+    z-index:5;
+
+  }
+
+  #item3{
+    position: absolute;
+    top: 95%;
+    left: 46%;
+    z-index:5;
+
+  }
+  #item4{
+    position: absolute;
+    top: 95%;
+    left: 48%;
+    z-index:5;
+
+  }
+  #item5{
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    z-index:5;
+
+  }
+  #item6{
+    position: absolute;
+    top: 95%;
+    left: 52%;
+    z-index:5;
+
+  }
+  #item7{
+    position: absolute;
+    top: 95%;
+    left: 54%;
+    z-index:5;
+
+  }
+  #item8{
+    position: absolute;
+    top: 95%;
+    left: 56%;
+    z-index:5;
+
   }
   
-  input#item2:checked ~ .carousel .carousel-item:nth-child(2) {
-    display: block;
-  }
-  
-  input#item3:checked ~ .carousel .carousel-item:nth-child(3) {
-    display: block;
-  }
-  
-  input#item4:checked ~ .carousel .carousel-item:nth-child(4) {
-    display: block;
-  }
-  
-  input#item5:checked ~ .carousel .carousel-item:nth-child(4) {
-    display: block;
-  }
-  
-  input#item6:checked ~ .carousel .carousel-item:nth-child(4) {
-    display: block;
-  }
-  
-  input#item7:checked ~ .carousel .carousel-item:nth-child(4) {
-    display: block;
-  }
-  
-  input#item8:checked ~ .carousel .carousel-item:nth-child(4) {
-    display: block;
-  }/*# sourceMappingURL=styles.css.map */
+
+  /*# sourceMappingURL=styles.css.map */
+
