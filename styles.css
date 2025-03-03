@@ -404,4 +404,273 @@ section {
   width: 100%;
   text-align: center;
   font-family: "Courier New", Courier, monospace;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+#game, #table {
+  height: 100%;
+}
+
+#game {
+  flex: 3;
+}
+
+#table {
+  flex: 2;
+}
+
+#table #scoreboard {
+  float: right;
+  background: white;
+}
+
+#table #scoreboard td {
+  padding: 5px;
+}
+
+td input {
+  outline: none;
+  border-radius: 0;
+  border-style: none;
+  text-align: center;
+}
+
+/* .game-table #man{
+    height: 70px;
+    position:static;
+    top: 230px;
+    right:450px;
+
+}
+
+.game-table #woman{
+    height: 70px;
+    position:fixed;
+    bottom: 70px;
+    right: 450px;
+} */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: black;
+}
+
+#rules {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(#0093a5, #00a5e8);
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(#0093a5, #00a5e8);
+}
+
+.carousel {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient(#0093a5, #008574);
+  border: 2px solid silver;
+  border-radius: 8px;
+}
+
+.carousel-item h2 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.carousel-container h1 {
+  color: white;
+}
+
+.carousel-item p {
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  line-height: 1.6;
+}
+
+input[type=radio] {
+  width: 50pxl;
+  accent-color: #009dcd;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-nav.prev {
+  left: 10px;
+}
+
+.carousel-nav.next {
+  right: 10px;
+}
+
+#item1:checked ~ .carousel-item {
+  transform: translateX(0%);
+}
+
+#item2:checked ~ .carousel-item {
+  transform: translateX(-100%);
+}
+
+#item3:checked ~ .carousel-item {
+  transform: translateX(-200%);
+}
+
+#item4:checked ~ .carousel-item {
+  transform: translateX(-300%);
+}
+
+#item5:checked ~ .carousel-item {
+  transform: translateX(-400%);
+}
+
+#item6:checked ~ .carousel-item {
+  transform: translateX(-500%);
+}
+
+#item7:checked ~ .carousel-item {
+  transform: translateX(-600%);
+}
+
+#item8:checked ~ .carousel-item {
+  transform: translateX(-700%);
+}
+
+label[for=item1],
+label[for=item8] {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label[for=item1] {
+  left: 10px;
+}
+
+label[for=item2] {
+  right: 10px;
+}
+
+label:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#item1 {
+  position: absolute;
+  top: 95%;
+  left: 42%;
+  z-index: 5;
+}
+
+#item2 {
+  position: absolute;
+  top: 95%;
+  left: 44%;
+  z-index: 5;
+}
+
+#item3 {
+  position: absolute;
+  top: 95%;
+  left: 46%;
+  z-index: 5;
+}
+
+#item4 {
+  position: absolute;
+  top: 95%;
+  left: 48%;
+  z-index: 5;
+}
+
+#item5 {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  z-index: 5;
+}
+
+#item6 {
+  position: absolute;
+  top: 95%;
+  left: 52%;
+  z-index: 5;
+}
+
+#item7 {
+  position: absolute;
+  top: 95%;
+  left: 54%;
+  z-index: 5;
+}
+
+#item8 {
+  position: absolute;
+  top: 95%;
+  left: 56%;
+  z-index: 5;
+}
+
+.carousel-container a:link {
+  text-decoration: none;
+  color: white;
+}
+
+.carousel-container a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.carousel-container a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.carousel-container a:active {
+  text-decoration: underline;
+  color: white;
+}
+
+/*# sourceMappingURL=styles.css.map */
