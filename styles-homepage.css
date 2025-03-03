@@ -1,5 +1,77 @@
-header {
+
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#members{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.member{
+    display: flex;
+    flex-direction: row;
+    font-size: 26px;
+}
+
+body {
+    background-image: url(./images/leaves.webp);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#description { 
+    text-align: center;
+    font-size: 26px;
+
+}
+
+span {
+    font-weight: bold;
+    font-size: 26px;
+}
+
+#link-button {
+    background-color: green;
+    padding: 26px;
+    border-radius: 10px;
+    margin: 50px;
+}
+
+a:hover {
+    font-size: 40pt;
+    text-decoration: none;
+    color: white;
+}
+
+a:active {
+    font-size: 40pt;
+    text-decoration: none;
+    color: white;
+}
+
+a:link {
+    font-size: 40pt;
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    font-size: 40pt;
+    text-decoration: none;
+    color: white;
+}
+
+header h1, h2, h3{
+    text-align: center;
+}
+
+h4 {
+    margin-bottom: 2px;
 }
