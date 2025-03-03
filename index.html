@@ -7,117 +7,121 @@
     <title>Yahtzee</title>
 </head>
 <body>
+
+
+    <!-- ------------ -!>
+        Page Header
+    <--- ------------ -->
     <header>
         <div id="credit">
             Made by <a href="#">Emma Brown</a>, <a href="#">Celine Selke</a>, <a href="#">Thomas Vu</a>
         </div>
-        <img src = "./images/yahtzeelogo.png">
+        <img src="./images/yahtzeelogo.png" alt="Yahtzee Logo">
     </header>
+    
+    <!-- ------------ -!>
+          Game Table
+    <--- ------------ -->
 
     <section id="game-board">
         <div id="game-body">
+
+            <!-- ------------ -!>
+                    Game
+            <--- ------------ -->
+
             <div id="game">
+                <div id="opponent">
+                    <img src="./images/clipart-guy.png" class="game-img" alt="Opponent">
+                    <div class="name">Nick Offerman</div>
+                </div>
+
+                <div id="dice-wrapper">
+                    <input type="radio" id="roll-1" name="roll">
+                    <input type="radio" id="roll-2" name="roll">
+                    <input type="radio" id="roll-3" name="roll">
+                    <input type="radio" id="roll-4" name="roll">
+                    <input type="radio" id="roll-5" name="roll">
+                    <input type="radio" id="roll-6" name="roll">
+                    
+                    <div class="wrapper">
+                        <div class="dice">
+                            <div class="face face-1"></div>
+                            <div class="face face-2"></div>
+                            <div class="face face-3"></div>
+                            <div class="face face-4"></div>
+                            <div class="face face-5"></div>
+                            <div class="face face-6"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="roll-result rr1">You got 1.</div>
+                    <div class="roll-result rr2">You got 2.</div>
+                    <div class="roll-result rr3">You got 3.</div>
+                    <div class="roll-result rr4">You got 4.</div>
+                    <div class="roll-result rr5">You got 5.</div>
+                    <div class="roll-result rr6">You got 6!</div>
+
+                    <div class="click-area">
+                        <p>Click Here to Roll</p>
+                        <label class="throw throw-1" for="roll-1"></label>
+                        <label class="throw throw-2" for="roll-2"></label>
+                        <label class="throw throw-3" for="roll-3"></label>
+                        <label class="throw throw-4" for="roll-4"></label>
+                        <label class="throw throw-5" for="roll-5"></label>
+                        <label class="throw throw-6" for="roll-6"></label>
+                    </div>
+                </div>
+                
+                <div id="player">
+                    <img src="./images/man.png" class="game-img" alt="Player">
+                    <div class="name">Player</div>
+                </div>
             </div>
 
+            <!-- ------------ -!>
+                Score Sheet
+            <--- ------------ -->
+            
+
             <div id="table">
-                <!--3 column, 17 row-->
-                <table id = "scoreboard" border = 1>
+                <table id="scoreboard" border="1">
                     <tr>
-                        <td colspan = "3"><b>Scoreboard</b></td>
+                        <td colspan="3"><b>Scoreboard</b></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>You</td>
                         <td>Player 2</td>
                     </tr>
-                    <tr>
-                        <td>Ones</td>
-                        <td><input type="text"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Twos</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Threes</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Fours</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Fives</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Sixes</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Sum</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Bonus</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Three of a Kind</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Four of a Kind</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Full House</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Small Straight</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Large Straight</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Chance</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>YAHTZEE</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Total Score</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    <tr><td>Ones</td><td></td><td></td></tr>
+                    <tr><td>Twos</td><td></td><td></td></tr>
+                    <tr><td>Threes</td><td></td><td></td></tr>
+                    <tr><td>Fours</td><td></td><td></td></tr>
+                    <tr><td>Fives</td><td></td><td></td></tr>
+                    <tr><td>Sixes</td><td></td><td></td></tr>
+                    <tr><td>Sum</td><td></td><td></td></tr>
+                    <tr><td>Bonus</td><td></td><td></td></tr>
+                    <tr><td>Three of a Kind</td><td></td><td></td></tr>
+                    <tr><td>Four of a Kind</td><td></td><td></td></tr>
+                    <tr><td>Full House</td><td></td><td></td></tr>
+                    <tr><td>Small Straight</td><td></td><td></td></tr>
+                    <tr><td>Large Straight</td><td></td><td></td></tr>
+                    <tr><td>Chance</td><td></td><td></td></tr>
+                    <tr><td>YAHTZEE</td><td></td><td></td></tr>
+                    <tr><td>Total Score</td><td></td><td></td></tr>
                 </table>
             </div>
-
         </div>
+
         <div id="game-footer">
             <a href="#rules">Rules</a> | New Game
         </div>
     </section>
+
+    <!-- ------------ -!>
+            Rules
+    <--- ------------ -->
 
     <section id="rules">
         <div class="carousel-container">
@@ -218,8 +222,15 @@
         </div>
     </section>
 
+    <!-- ------------ -!>
+            Footer
+    <--- ------------ -->
+
+
     <footer>
-        This is a footer
+        <div id="credit">
+            Made by <a href="#">Emma Brown</a>, <a href="#">Celine Selke</a>, <a href="#">Thomas Vu</a>
+        </div>
     </footer>
 </body>
 </html>
