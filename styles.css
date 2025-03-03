@@ -80,7 +80,7 @@ section {
 }
 #dice-wrapper .click-area {
   width: 200px;
-  height: 10px;
+  height: 50px;
   overflow: hidden;
   position: relative;
   margin-left: auto;
