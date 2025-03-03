@@ -320,6 +320,16 @@ section {
     padding: 5px
 }
 
+/*Hide border and outline of scoreboard input, align input text*/
+
+td input{
+  outline:none;
+  border-radius: 0;
+  border-style: none;
+  text-align: center;
+  width: 30px;
+}
+
 
 /* Rules Page */
 
@@ -351,31 +361,7 @@ section {
   #table #scoreboard td {
     padding: 5px;
   }
-
-  td input{
-    outline:none;
-    border-radius: 0;
-    border-style: none;
-    text-align: center;
-    width: 30px;
-  }
   
-
-  
-  /* .game-table #man{
-      height: 70px;
-      position:static;
-      top: 230px;
-      right:450px;
-  
-  }
-  
-  .game-table #woman{
-      height: 70px;
-      position:fixed;
-      bottom: 70px;
-      right: 450px;
-  } */
   * {
     margin: 0;
     padding: 0;
@@ -401,16 +387,20 @@ section {
 
   }
   
+  /*Hides overflow to only display one element of the rules carousel at a time*/
+
   .carousel-container {
     position: relative;
     overflow: hidden;
     background-image: linear-gradient(#0093a5, #00a5e8);
   }
-  
+
   .carousel {
     display: flex;
     transition: transform 1s ease-in-out;
   }
+
+
   
   .carousel-item {
     min-width: 100%;
@@ -466,7 +456,7 @@ section {
     right: 10px;
   }
   
-
+  /*When a label is checked, all divs of class carousel-item are translated to the left. Since overflows are hidden by the parent, only one carousel-item is displayed at a time*/
   
   #item1:checked ~ .carousel-item {
     transform: translateX(0%);
@@ -508,7 +498,7 @@ section {
     top: 50%;
     transform: translateY(-50%);
     font-size: 24px;
-    color: #fff;
+    color: white;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     cursor: pointer;
@@ -530,7 +520,7 @@ section {
     background-color: rgba(0, 0, 0, 0.7);
   }
   
-
+  /*All radio buttons/labels moved to under the carousel items*/
 
   #item1{
     position: absolute;
@@ -588,6 +578,8 @@ section {
     z-index:5;
 
   }
+
+  /*Remove decoration from link to rules pdf*/
   
   .carousel-container a:link {
     text-decoration: none;
